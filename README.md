@@ -118,7 +118,7 @@ Available command line args:
 
 ## Screenshot
 
-todo
+[[https://github.com/jhdscript/UBackup/blob/master/ubackup.png|alt=ubackup]]
 
 As you can see in this screenshot, UBackup is very performant and it could be used to backup or restore large volume of data. Statistics are displayed in the window title.
 
@@ -130,6 +130,7 @@ UBackup is develop in VB.Net because .Net Framework is fast and present in all W
 
 The logical tree explains how is structured UBackup. [D] is for directory and [F] for file.
 
+```
 [D] UBackup Folder
 ---[F] UBackup.exe: main program
 ---[F] UBackup.pdb: debug file
@@ -148,6 +149,7 @@ The logical tree explains how is structured UBackup. [D] is for directory and [F
 ---[D] Restore: destination folder for Restore mode
 ---[D] Temp: temporary folder for processing
 ---[D] Zip: contains database archives
+```
 
 ### Processing
 
@@ -170,7 +172,7 @@ UBackup is under development and some new features will appear in future release
 
 For more information or help you could read online reviews
 
-* todo (French)
+Coming Soon
 
 ## Dependencies
 
@@ -213,13 +215,11 @@ For any question I recommand you to visit my blog (https://www.zem.fr) or to ope
 
 UBackup is totally free, but you can help us with a small donation:
 
-* BTC: todo
-* LTC:
-* TRX:
-* XRP:
-* ETH:
-* ETC:
-* DOGE:
+* BTC: 1EGeXCdvWz2RdhcPnPuStg8s2TFs18Yi5x
+* LTC: LY8uA7JDbg8kQBnLp6DkqEuFD1zNqKayQj
+* TRX: TX4xiCK4aS84vmTL9CWK141EFCg53wTtmY
+* ETH: 0xf47d7b0c1efa3aa7df0cd5ffb60b6fbd085187eb
+* ETC: 0xf47d7b0c1efa3aa7df0cd5ffb60b6fbd085187eb
 
 Paypal donation could be sent to: jhdscript at gmail.com
 

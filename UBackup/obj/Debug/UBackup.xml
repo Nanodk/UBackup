@@ -1,0 +1,461 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+UBackup
+</name>
+</assembly>
+<members>
+<member name="T:UBackup.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:UBackup.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:UBackup.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:UBackup.Backup">
+ <summary>
+ Prepare files and upload to newsgroup
+ </summary>
+</member>
+<member name="M:UBackup.Backup.Start">
+ <summary>
+ Start workers
+ </summary>
+</member>
+<member name="M:UBackup.Backup.Stop">
+ <summary>
+ Stop workers
+ </summary>
+</member>
+<member name="M:UBackup.Backup.ThreadPrepare_Work">
+ <summary>
+ Prepare files to be upload (encryption and parity)
+ </summary>
+</member>
+<member name="T:UBackup.Config">
+ <summary>
+ Store some configuration information
+ </summary>
+</member>
+<member name="M:UBackup.Config.Load">
+ <summary>
+ Load configuration file
+ </summary>
+</member>
+<member name="T:UBackup.Database">
+ <summary>
+ Database operations
+ </summary>
+</member>
+<member name="M:UBackup.Database.Load">
+ <summary>
+ Load database in memory
+ </summary>
+</member>
+<member name="M:UBackup.Database.Save(System.Boolean)">
+ <summary>
+ Save database into file
+ </summary>
+</member>
+<member name="M:UBackup.Database.GetDbo(System.Collections.Generic.Dictionary{System.String,UBackup.Database.DatabaseObj},System.String)">
+ <summary>
+ Return the DatabaseObj if it already exists
+ </summary>
+</member>
+<member name="M:UBackup.Database.Scan">
+ <summary>
+ Scan a folder and fill database
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:UBackup.Database.ScanRecursively(System.DateTime,UBackup.Database.DatabaseObj,System.String,System.Int32@,System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+ <summary>
+ Scan a folder recursively
+ </summary>
+</member>
+<member name="M:UBackup.Database.Restore(System.String)">
+ <summary>
+ Return all dbo to restore
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:UBackup.Database.RestoreRecursively(UBackup.Database.DatabaseObj,System.String,System.Int32@,System.Int32@,System.Int32@)">
+ <summary>
+ Restore a DatabaseObj recursively
+ </summary>
+</member>
+<member name="M:UBackup.Database.Zip">
+ <summary>
+ Zip folder nbz for security
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:UBackup.Database.Tree">
+ <summary>
+ Tree database into output file
+ </summary>
+</member>
+<member name="M:UBackup.Database.TreeRecursive(System.IO.StreamWriter,System.Collections.Generic.Dictionary{System.String,UBackup.Database.DatabaseObj},System.Int32)">
+ <summary>
+ Recursive function which loop db
+ </summary>
+</member>
+<member name="M:UBackup.Database.TreeHeader">
+ <summary>
+ Return tree header
+ </summary>
+</member>
+<member name="M:UBackup.Database.TreeDbo(UBackup.Database.DatabaseObj,System.Int32)">
+ <summary>
+ Format output for a DatabaseObj
+ </summary>
+</member>
+<member name="T:UBackup.Database.DatabaseObj">
+ <summary>
+ Represent a Database Object
+ </summary>
+</member>
+<member name="T:UBackup.Log">
+ <summary>
+ Manage logging
+ </summary>
+</member>
+<member name="M:UBackup.Log.Start">
+ <summary>
+ Init the flusher
+ </summary>
+</member>
+<member name="M:UBackup.Log.Stop">
+ <summary>
+ Stop the flusher
+ </summary>
+</member>
+<member name="M:UBackup.Log.TimerFlushElapsed">
+ <summary>
+ Flush in file
+ </summary>
+</member>
+<member name="M:UBackup.Log.ToLine(UBackup.Log)">
+ <summary>
+ Export Log Object to line
+ </summary>
+</member>
+<member name="M:UBackup.Log.Add(UBackup.Log.LogType,System.String)">
+ <summary>
+ Add a log in queue
+ </summary>
+ <param name="msg"></param>
+</member>
+<member name="M:UBackup.Log.E(System.String)">
+ <summary>
+ Log an error message
+ </summary>
+ <param name="msg"></param>
+</member>
+<member name="M:UBackup.Log.I(System.String)">
+ <summary>
+ Log an information message
+ </summary>
+ <param name="msg"></param>
+</member>
+<member name="M:UBackup.Log.D(System.String)">
+ <summary>
+ Log an debug message
+ </summary>
+ <param name="msg"></param>
+</member>
+<member name="M:UBackup.Log.W(System.String)">
+ <summary>
+ Log an warn message
+ </summary>
+ <param name="msg"></param>
+</member>
+<member name="M:UBackup.Log.ForceFlush">
+ <summary>
+ Force flush data into file
+ </summary>
+</member>
+<member name="M:UBackup.Module1.DisplayHelpCmdArgs">
+ <summary>
+ Display CmdLine Help
+ </summary>
+</member>
+<member name="M:UBackup.Module1.DisplayHelp">
+ <summary>
+ Display Help
+ </summary>
+</member>
+<member name="M:UBackup.Module1.CmdRestore(System.String)">
+ <summary>
+ Restore command
+ </summary>
+</member>
+<member name="M:UBackup.Module1.CmdBackup">
+ <summary>
+ Backup command
+ </summary>
+</member>
+<member name="M:UBackup.Module1.CmdZip">
+ <summary>
+ Zip command
+ </summary>
+</member>
+<member name="M:UBackup.Module1.CmdTree">
+ <summary>
+ Tree command
+ </summary>
+</member>
+<member name="M:UBackup.Module1.StopAll">
+ <summary>
+ Stop all threaded workers
+ </summary>
+</member>
+<member name="M:UBackup.Module1.EnsureAllDirectoriesAndExe">
+ <summary>
+ Ensure all directories exists
+ </summary>
+</member>
+<member name="T:UBackup.ProcessWrapper">
+ <summary>
+ Run a process
+ </summary>
+</member>
+<member name="M:UBackup.ProcessWrapper.Run(System.String,System.String,System.String,System.Int32,System.Int32@)">
+ <summary>
+ Run an external process
+ </summary>
+</member>
+<member name="M:UBackup.ProcessWrapper.Par2Create(System.String,System.String)">
+ <summary>
+ Create parity files
+ </summary>
+</member>
+<member name="M:UBackup.ProcessWrapper.Par2Repair(System.String,System.String)">
+ <summary>
+ Check and Repair file
+ </summary>
+</member>
+<member name="M:UBackup.ProcessWrapper.NyuuUpload(System.String,System.String,System.String)">
+ <summary>
+ Upload to newsgroup server
+ </summary>
+</member>
+<member name="M:UBackup.ProcessWrapper.NzbGet(System.String,System.String)">
+ <summary>
+ Download from newsgroup server
+ </summary>
+</member>
+<member name="M:UBackup.ProcessWrapper.KillProcesses">
+ <summary>
+ Kill running processing
+ </summary>
+</member>
+<member name="T:UBackup.Restore">
+ <summary>
+ Restore files from newsgroup
+ </summary>
+</member>
+<member name="M:UBackup.Restore.Start">
+ <summary>
+ Start workers
+ </summary>
+</member>
+<member name="M:UBackup.Restore.Stop">
+ <summary>
+ Stop workers
+ </summary>
+</member>
+<member name="M:UBackup.Restore.ThreadDownload_Work">
+ <summary>
+ Download nzb file
+ </summary>
+</member>
+<member name="M:UBackup.Restore.ThreadRestore_Work">
+ <summary>
+ Restore original file
+ </summary>
+</member>
+<member name="T:UBackup.Serializer">
+ <summary>
+ Object Serializer
+ </summary>
+</member>
+<member name="M:UBackup.Serializer.Serialize(System.Object,System.String)">
+ <summary>
+ Serialize an object
+ </summary>
+</member>
+<member name="M:UBackup.Serializer.Deserialize``1(System.String)">
+ <summary>
+ Unserialize an object from file
+ </summary>
+</member>
+<member name="T:UBackup.Stats">
+ <summary>
+ Represents some statistics
+ </summary>
+</member>
+<member name="M:UBackup.Stats.Display(System.String)">
+ <summary>
+ Returns a stat line
+ </summary>
+</member>
+<member name="T:UBackup.Utilities">
+ <summary>
+ Some utilities functions
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.UTF8">
+ <summary>
+ Default encoding to use
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.ExecutableFolder">
+ <summary>
+ Returns ExecutableFolder Path
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.FolderTemp">
+ <summary>
+ Returns temp folder
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.FolderNzb">
+ <summary>
+ Return folder to store Nzb and database
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.FolderZip">
+ <summary>
+ Return folder to store zip archives of nzb folder
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.FolderRestore">
+ <summary>
+ Return folder to save restored data
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.AssemblyName">
+ <summary>
+ Returns Assembly Name
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.Rnd">
+ <summary>
+ Random Object
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.Checksum(System.Byte[]@)">
+ <summary>
+ Calculate a byte array checksum
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.Checksum(System.IO.FileInfo)">
+ <summary>
+ Calculate a file checksum (from FileInfo) 
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.Xorify(System.String,System.String,System.String@)">
+ <summary>
+ Generate FileBucketParts with split and xor encryption
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.Xorify(System.Byte[]@,System.Byte[])">
+ <summary>
+ Encrypt Data
+ </summary>
+</member>
+<member name="F:UBackup.Utilities.SPLIT_JOIN_PREFIX">
+ <summary>
+ Prefix for parts
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.SplitJoinGetSize(System.IO.FileInfo)">
+ <summary>
+ Return the most appropriate split file size
+ </summary>
+ <param name="fi"></param>
+</member>
+<member name="M:UBackup.Utilities.SplitAndXor(System.Byte[],System.String,System.String)">
+ <summary>
+ Generate parts with split and xor encryption
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.JoinAndXor(System.Byte[],System.IO.FileInfo[],System.String)">
+ <summary>
+ Join parts into single file and xor encryption
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.ConvertSizeToHumanReadable(System.Double)">
+ <summary>
+ Convert a byte size in human readable format
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.GenerateId">
+ <summary>
+ Generate an id
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.UpdateTitle(System.String)">
+ <summary>
+ Update the display console title
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.RandomPoster">
+ <summary>
+ Generate a random poster
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.DeleteFile(System.String)">
+ <summary>
+ Try to delete a file
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.DeleteDirectory(System.String)">
+ <summary>
+ Try to delete a directory
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.DeleteAllFilesForGuid(System.String)">
+ <summary>
+ Delete all temporary files for a guid
+ </summary>
+</member>
+<member name="M:UBackup.Utilities.EnsureDirectory(System.String)">
+ <summary>
+ Ensure a directory exists
+ </summary>
+ <param name="dirPath"></param>
+</member>
+<member name="T:UBackup.Zipper">
+ <summary>
+ Zip a folder
+ </summary>
+</member>
+<member name="M:UBackup.Zipper.Zip(System.String,System.String)">
+ <summary>
+ Create a zip archive for specified folder
+ </summary>
+</member>
+<member name="M:UBackup.Zipper.ZipPackageForEachFolder(System.IO.Packaging.Package,System.IO.DirectoryInfo,System.String)">
+ <summary>
+ Recursive function for package each folder
+ </summary>
+</member>
+<member name="M:UBackup.Zipper.CopyStream(System.IO.Stream,System.IO.Stream)">
+ <summary>
+ Copy Stream
+ </summary>
+</member>
+</members>
+</doc>
