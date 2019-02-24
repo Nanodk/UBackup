@@ -118,7 +118,8 @@ Available command line args:
 
 ## Screenshot
 
-[[https://github.com/jhdscript/UBackup/blob/master/ubackup.png|alt=ubackup]]
+[[https://github.com/jhdscript/UBackup/blob/master/ubackup.png?raw=true|alt=ubackup]]
+![UBackup](link-to-image)
 
 As you can see in this screenshot, UBackup is very performant and it could be used to backup or restore large volume of data. Statistics are displayed in the window title.
 
